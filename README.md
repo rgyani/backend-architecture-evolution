@@ -65,7 +65,7 @@ In the above architectures, the layer above always has a reference to the next o
 However, with the principle of Dependency Inversion, this becomes much more flexible  
 
 
-So instead of the layer above holding a reference to the layer above, we have   
+So instead of the layer above holding a reference to the layer below, we have   
 * a **Core**, previously the **Domain layer and Application Layer** which is the central component of the system. It does not have a reference to any other layers/components
 * the Infrastructure modules were split into **abstraction (interfaces)** and **implementation**. 
   * Abstractions become part of Business logic and are called **ports**
