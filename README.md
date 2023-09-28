@@ -59,6 +59,14 @@ and Domain becomes the centerpiece of our architecture
 
 ![](imgs/ddd.png)
 
+Domain-Driven Design (DDD) focuses on modeling the core business domain and aligning software design with the **concepts and processes within that domain**. It emphasizes close collaboration between domain experts and developers to establish a shared language and understanding.
+
+DDD introduces the concept of bounded contexts, which divide a large software system into smaller, more manageable contexts with their own models, rules, and ubiquitous language. This allows teams to work independently on different parts of the system.
+eg.
+* **Banking System**: A banking system can define bounded contexts such as "Account Management" and "Transaction Processing". Each bounded context has its own domain models, rules, and ubiquitous language. The "Account Management" context may have entities like Account and Customer, while the “Transaction Processing” context may have entities like Transaction and Transfer. This separation allows different teams to work independently and ensures clear understanding within each context.
+
+![img](imgs/bc.png)
+
 ## Hexagon Architecture (Ports and Adapters), by Alistair Cockburn, circa 2005
 
 In the above architectures, the layer above always has a reference to the next one in line. So, we can-not freely change the DAL layer without effecting the bussines logic.  
@@ -118,3 +126,63 @@ In Clean Architecture,
 * Presentation and Infrastructure layers stay the same
 
 ![img](imgs/CleanArchitecture.jpg)
+
+#### Clean Architecture offers several advantages, including:
+
+1. **Maintainability**: The clear separation of concerns and independent layers facilitate easier maintenance and updates without impacting the entire system.
+2. **Flexibility**: The architecture’s decoupling from frameworks and technologies allows for easy adoption of new tools or changes to the technology stack.
+3. **Testability**: The clear separation of dependencies and the ability to isolate components during testing ensures comprehensive and reliable unit testing.
+
+### SOLID principles
+
+SOLID is a mnemonic device for 5 design principles of object-oriented programs (OOP) that result in readable, adaptable, and scalable code. SOLID can be applied to any OOP program.
+
+The 5 principles of SOLID are:
+
+* Single-responsibility principle
+* Open-closed principle
+* Liskov substitution principle
+* Interface segregation principle
+* Dependency inversion principle
+
+SOLID principles were developed by computer science instructor and author Robert C. Martin (sometimes called “Uncle Bob”) in 2000 and quickly became a staple of modern object-oriented design (OOD).
+
+
+### S: Single-responsibility principle
+
+The single-responsibility principle (SRP) states that each class, module, or function in your program should only do one job.   
+In other words, each should have full responsibility for a single functionality of the program.  
+The class should contain only variables and methods relevant to its functionality.  
+
+eg
+
+| Does not follow SRP | Follows SRP |
+|---|---|
+|![](imgs/s-bad.png)|![](imgs/s-good.png)|
+
+### O: Open-closed principle
+
+“Software entities … should be open for extension, but closed for modification.”
+
+The general idea of this principle is great. It tells you to write your code so that you will be able to add new functionality without changing the existing code. That prevents situations in which a change to one of your classes also requires you to adapt all depending classes
+
+| Does not follow OCP | Follows OCP |
+|---|---|
+|![](imgs/ocp-bad.png)|![](imgs/ocp-good.png)|
+
+
+### L: Liskov substitution principle
+
+The Liskov Substitution Principle (LSP) applies to inheritance hierarchies such that derived classes must be completely substitutable for their base classes.
+
+| Does not follow LSP | Follows LSP |
+|---|---|
+|![](imgs/lsp-bad.png)|![](imgs/lsp-good.png)|
+
+### I: Interface segregation principle
+"Many client-specific interfaces are better than one general-purpose interface."
+
+### D: Dependency inversion principle
+The principle states:
+ * High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
+ * Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
