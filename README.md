@@ -127,6 +127,18 @@ In Clean Architecture,
 
 ![img](imgs/CleanArchitecture.jpg)
 
+**Source code dependencies can only point inwards. Nothing in an inner circle can know anything at all about something in an outer circle.** 
+
+### Crossing boundaries.
+
+#### Control 
+At the lower right of the diagram is an example of how we cross the circle boundaries. It shows the Controllers and Presenters communicating with the Use Cases in the next layer. Note the flow of control. It begins in the controller, moves through the use case, and then winds up executing in the presenter. Note also the source code dependencies. Each one of them points inwards towards the use cases.   
+This is done via dependency inversion principle, where we have the use case call an interface (Shown here as Use Case Output Port) in the inner circle, and have the presenter in the outer circle implement it.
+
+#### Data
+Typically the data that crosses the boundaries is simple data structures. You can use basic structs or simple Data Transfer objects if you like. Or the data can simply be arguments in function calls. Or you can pack it into a hashmap, or construct it into an object. The important thing is that isolated, simple, data structures are passed across the boundaries. We don’t want to cheat and pass Entities or Database rows. We don’t want the data structures to have any kind of dependency that violates The Dependency Rule.
+
+
 #### Clean Architecture offers several advantages, including:
 
 1. **Maintainability**: The clear separation of concerns and independent layers facilitate easier maintenance and updates without impacting the entire system.
