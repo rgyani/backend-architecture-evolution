@@ -67,6 +67,11 @@ eg.
 
 ![img](imgs/bc.png)
 
+Notice in the example above, both sales and support context have concepts of Customer and Product  
+**These different contexts can have very different representations of common domain models.**  
+**Each context can express the domain model in the simple form it requires.**
+
+
 ## Hexagon Architecture (Ports and Adapters), by Alistair Cockburn, circa 2005
 
 In the above architectures, the layer above always has a reference to the next one in line. So, we can-not freely change the DAL layer without effecting the bussines logic.  
