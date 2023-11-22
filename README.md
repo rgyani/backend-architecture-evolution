@@ -206,4 +206,6 @@ The principle states:
  * High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
  * Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
 
+# SOLID Principles Nicely Explained
+
 ![](https://pbs.twimg.com/tweet_video_thumb/F_Hq31rXQAA3NRT?format=jpg&name=medium)
