@@ -205,3 +205,5 @@ The Liskov Substitution Principle (LSP) applies to inheritance hierarchies such 
 The principle states:
  * High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
  * Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
+
+![](https://pbs.twimg.com/tweet_video_thumb/F_Hq31rXQAA3NRT?format=jpg&name=medium)
